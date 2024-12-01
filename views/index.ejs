@@ -10,14 +10,14 @@
 </head>
 <body>
         <div class="top-container">
-                <form action="/convert-mp3" method="POST" id="form">
-                    <h1><i class="fab fa-youtube"></i>YouTube MP3 Convertidor</h1>
-                    <h4>Introduce una URL</h4>
-                    <div>
-                        <input type="text" name="videoID" placeholder="Pega aquí el URL">
-                        <button id="convert-btn">Convertir</button>
-                    </div>
-                </form>
+            <form action="/convert-mp3" method="POST" id="form">
+                <h1><i class="fab fa-youtube"></i>YouTube MP3 Convertidor</h1>
+                <h4>Introduce una URL</h4>
+                <div>
+                    <input type="text" name="videoID" placeholder="Pega aquí el URL">
+                    <button id="convert-btn">Convertir</button>
+                </div>
+            </form>            
         </div>
             <div class="bottom-container">
                 <% if(typeof success != "undefined" && success) { %>

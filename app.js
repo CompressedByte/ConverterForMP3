@@ -1,17 +1,17 @@
+// app.js
 const express = require("express");
 const fetch = require("node-fetch");
 require("dotenv").config();
+const path = require("path"); // Importa el módulo 'path' para asegurar rutas correctas
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.set("views", path.join(__dirname, "views"));  // Esto asegura que Express busque en la carpeta correcta
 
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Página principal
